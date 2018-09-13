@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Login from './views/Login.vue';
 import App from './views/App.vue';
 import SignUp from './views/SignUp.vue';
+import Interest from './views/Interest.vue';
 import Chat from './views/chat/Chat.vue';
 import ChatHome from './views/chat/Home.vue';
 import Event from './views/event/Event.vue';
@@ -70,6 +71,12 @@ export default new Router({
             name: 'signUp',
             component: SignUp,
             beforeEnter: outGuard
+        },
+        {
+            path: '/interest',
+            name: 'interest',
+            component: Interest,
+            beforeEnter: inGuard
         }
     ]
 })
