@@ -1,5 +1,5 @@
 <template>
-    <div class="login container_center" style="padding-top: 100px">
+    <div class="login container_center wrapper" style="padding-top: 100px">
         <h1>SIGN UP</h1>
         <md-field>
             <md-icon>person</md-icon>
@@ -50,6 +50,12 @@
 </script>
 
 <style scoped lang="scss">
-   
+    div.wrapper{
+        background-image: url("./LogSign_bg.png");
+        background-color:#ffffff;
+        position: absolute;
+        width: 100%;
+        height:100%;
+    }
 
 </style>

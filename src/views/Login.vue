@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login wrapper">
         <div class="container_center">
             <md-field>
                 <md-icon>mail</md-icon>
@@ -45,6 +45,13 @@
     a.labelcenter{
         text-decoration: underline; 
         color: #ffffff;
+    }
+    div.wrapper{
+        background-image: url("./LogSign_bg.png");
+        background-color:#ffffff;
+        position: absolute;
+        width: 100%;
+        height:100%;
     }
 
 </style>

@@ -12,7 +12,7 @@ const events = {
     data: [
         {
             id: 1,
-            name: 'ABC ABC',
+            name: 'IOT pizza using raspberrPI workshop',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
