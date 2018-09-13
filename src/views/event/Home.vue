@@ -3,77 +3,45 @@
         <md-list class="md-double-line">
             <md-subheader>Recommended</md-subheader>
 
-            <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+            <router-link :to="`/app/event/detail/${rEvent.id}`" v-for="rEvent in recommended" :key="rEvent.id">
+                <md-list-item>
+                    <div>
+                        <img src="https://via.placeholder.com/100x60"/>
+                    </div>
 
-                <div class="md-list-item-text">
-                    <span>Okutama Hackathonasdsadsadas</span>
-                    <span>Mobile</span>
-                    <span>Mobileasdasdsadsadsadasds</span>
-                </div>
-            </md-list-item>
-
-            <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
-
-                <div class="md-list-item-text">
-                    <span>Okutama Hackathon</span>
-                    <span>Mobile</span>
-                    <span>Mobile</span>
-                </div>
-            </md-list-item>
+                    <div class="md-list-item-text">
+                        <span>{{rEvent.name}}</span>
+                        <span>Mobile</span>
+                        <span>Mobileasdasdsadsadsadasds</span>
+                    </div>
+                </md-list-item>
+            </router-link>
 
             <md-divider></md-divider>
             <md-subheader>Popular</md-subheader>
 
-            <md-list-item>
+            <md-list-item v-for="pEvent in popular" :key="pEvent.id">
                 <div>
                     <img src="https://via.placeholder.com/100x60"/>
                 </div>
 
                 <div class="md-list-item-text">
-                    <span>Okutama Hackathonasdsadsadas</span>
+                    <span>{{pEvent.name}}</span>
                     <span>Mobile</span>
                     <span>Mobileasdasdsadsadsadasds</span>
-                </div>
-            </md-list-item>
-
-            <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
-
-                <div class="md-list-item-text">
-                    <span>Okutama Hackathon</span>
-                    <span>Mobile</span>
-                    <span>Mobile</span>
                 </div>
             </md-list-item>
 
             <md-divider></md-divider>
             <md-subheader>Category</md-subheader>
 
-            <md-list-item>
+            <md-list-item v-for="cat in category" :key="cat.id">
                 <div>
                     <img src="https://via.placeholder.com/100x60"/>
                 </div>
 
                 <div class="md-list-item-text">
-                    <span>Cooking</span>
-                </div>
-            </md-list-item>
-
-            <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
-
-                <div class="md-list-item-text">
-                    <span>IOT</span>
+                    <span>{{cat.name}}</span>
                 </div>
             </md-list-item>
         </md-list>
@@ -82,7 +50,38 @@
 
 <script>
     export default {
-        name: "ChatHome"
+        name: "ChatHome",
+        data: function () {
+            return {
+                recommended: [],
+                popular: [],
+                category: []
+            }
+        },
+        mounted: function () {
+            const events = JSON.parse(localStorage.getItem('events'));
+
+            const data = events.data;
+
+            events.recommended.forEach((x) => {
+                data.forEach((y) => {
+                    if(x === y.id){
+                        this.recommended.push(y);
+                    }
+                })
+            });
+
+            events.popular.forEach((x) => {
+                data.forEach((y) => {
+                    if(x === y.id){
+                        this.popular.push(y);
+                    }
+                })
+            });
+
+            this.category = events.category;
+        },
+        method: {}
     }
 </script>
 
