@@ -20,7 +20,7 @@
             <label>Confirm Password</label>
             <md-input></md-input>
         </md-field>
-        <md-button v-on:click="login()">Signup</md-button>
+        <md-button v-on:click="signUp()">Sign Up</md-button>
     </div>
 </template>
 
@@ -31,10 +31,8 @@
         name: 'sign-up',
         components: {},
         methods: {
-            login: function () {
-                //TODO create login  fucntion
-                localStorage.setItem('loggedIn', 'true');
-                this.$router.push('/');
+            signUp: function () {
+                this.$router.push('/login');
             }
         }
     }
