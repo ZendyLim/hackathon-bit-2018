@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Login from './views/Login.vue';
 import Dashboard from './views/Dashboard.vue';
 import SignUp from './views/SignUp.vue';
+import Interest from './views/Interest.vue';
 
 Vue.use(Router);
 
@@ -41,6 +42,12 @@ export default new Router({
             name: 'signUp',
             component: SignUp,
             beforeEnter: outGuard
+        },
+        {
+            path: '/interest',
+            name: 'interest',
+            component: Interest,
+            beforeEnter: inGuard
         }
     ]
 })

@@ -1,5 +1,6 @@
 <template>
-    <div class="login">
+    <div class="login container_center" style="padding-top: 100px">
+        <h1>SIGN UP</h1>
         <md-field>
             <md-icon>person</md-icon>
             <label>Name</label>
@@ -20,7 +21,12 @@
             <label>Confirm Password</label>
             <md-input></md-input>
         </md-field>
-        <md-button v-on:click="login()">Signup</md-button>
+        <md-datepicker v-model="birthdate">
+            <label>Birthdate</label>
+        </md-datepicker>
+        <md-button v-on:click="login()" class="buttonBlue">Sign up</md-button>
+        <br />
+        <label>Already have an account?  <a v-on:click="signin()">SIGN IN</a></label>
     </div>
 </template>
 
@@ -34,8 +40,16 @@
             login: function () {
                 //TODO create login  fucntion
                 localStorage.setItem('loggedIn', 'true');
-                this.$router.push('/');
+                this.$router.push('/interest');
+            },
+            signin: function () {
+                this.$router.push('/login');
             }
         }
     }
 </script>
+
+<style scoped lang="scss">
+   
+
+</style>
