@@ -9,7 +9,7 @@ Vue.config.productionTip = false;
 Vue.use(VueMaterial);
 
 const events = {
-    recommended: [
+    data: [
         {
             id: 1,
             name: 'ABC ABC',
@@ -33,16 +33,6 @@ const events = {
             view: 100000,
             participant: 1510,
             joined: false
-        }
-    ],
-    popular: [
-        {
-            id: 1,
-            name: 'ABC ABC',
-            date: '23-08-2018',
-            view: 100000,
-            participant: 1510,
-            joined: false
         },
         {
             id: 4,
@@ -61,14 +51,18 @@ const events = {
             joined: false
         }
     ],
+    recommended: [1, 2, 3],
+    popular: [1, 4, 5],
     category: [
         {
             id: 'iot',
-            name: 'IOT'
+            name: 'IOT',
+            data: [1, 5, 2]
         },
         {
             id: 'cooking',
-            name: 'Cooking'
+            name: 'Cooking',
+            data: [2, 3, 4]
         }
     ]
 };
