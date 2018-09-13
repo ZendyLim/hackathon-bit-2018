@@ -15,7 +15,7 @@
             <a>Forgot password?</a>
             <md-button v-on:click="login()" class="buttonBlue">Login</md-button>
             <br />
-            <label>Don't have an account?  <a v-on:click="signup()">SIGN UP</a></label>
+            <label>Don't have an account?  <router-link to="/signup">SIGN UP</router-link></label>
             
         </div>
     </div>
@@ -31,7 +31,7 @@
             login: function () {
                 //TODO create login  fucntion
                 localStorage.setItem('loggedIn', 'true');
-                this.$router.push('/');
+                this.$router.push('/app/event');
             },
 
             signup: function () {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <md-list class="md-double-line">
+        <md-list class="md-double-line white">
             <md-subheader>Recommended</md-subheader>
 
             <router-link :to="`/app/event/detail/${rEvent.id}`" v-for="rEvent in recommended" :key="rEvent.id">
@@ -9,10 +9,10 @@
                         <img src="https://via.placeholder.com/100x60"/>
                     </div>
 
-                    <div class="md-list-item-text">
+                    <div class="md-list-item-text padd" >
                         <span>{{rEvent.name}}</span>
-                        <span>Mobile</span>
-                        <span>Mobileasdasdsadsadsadasds</span>
+                        <span>Okutama</span>
+                    <span>A event description</span>
                     </div>
                 </md-list-item>
             </router-link>
@@ -25,10 +25,10 @@
                     <img src="https://via.placeholder.com/100x60"/>
                 </div>
 
-                <div class="md-list-item-text">
+                <div class="md-list-item-text padd">
                     <span>{{pEvent.name}}</span>
-                    <span>Mobile</span>
-                    <span>Mobileasdasdsadsadsadasds</span>
+                    <span>Okutama</span>
+                    <span>A event description</span>
                 </div>
             </md-list-item>
 
@@ -40,7 +40,7 @@
                     <img src="https://via.placeholder.com/100x60"/>
                 </div>
 
-                <div class="md-list-item-text">
+                <div class="md-list-item-text padd">
                     <span>{{cat.name}}</span>
                 </div>
             </md-list-item>
@@ -86,5 +86,15 @@
 </script>
 
 <style scoped>
+.whitebackground{
+    background-color: #f8f8f9 !important;
+    height: 500px;
+    color: #000000;
+    position: absolute;
+
+}
+.padd{
+    padding-left: 10px;
+}
 
 </style>

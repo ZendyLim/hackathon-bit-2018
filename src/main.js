@@ -12,7 +12,7 @@ const events = {
     data: [
         {
             id: 1,
-            name: 'IOT pizza using raspberrPI workshop',
+            name: 'IOT Pizza Using RaspberrPI Workshop',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
@@ -20,7 +20,7 @@ const events = {
         },
         {
             id: 2,
-            name: 'awehdjkashdjkahdjkasdkjsadhjkhsajkdhasjd',
+            name: 'Event 2',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
@@ -28,7 +28,7 @@ const events = {
         },
         {
             id: 3,
-            name: 'assdasjgdhasghdj',
+            name: 'Event 3',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
@@ -36,7 +36,7 @@ const events = {
         },
         {
             id: 4,
-            name: 'asd asdqwer  32  rsdasd',
+            name: 'Event 4',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
@@ -44,7 +44,7 @@ const events = {
         },
         {
             id: 5,
-            name: 'asdasdasda c xccvsd dfasff',
+            name: 'Event 5',
             date: '23-08-2018',
             view: 100000,
             participant: 1510,
