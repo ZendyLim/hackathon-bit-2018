@@ -1,25 +1,46 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Login from './views/Login.vue';
+import Dashboard from './views/Dashboard.vue';
+import SignUp from './views/SignUp.vue';
 
 Vue.use(Router);
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+const outGuard = (to, from, next) => {
+    if (localStorage.getItem("loggedIn")) {
+        next('/dashboard')
     }
-  ]
+    next();
+};
+
+const inGuard = (to, from, next) => {
+    if (localStorage.getItem("loggedIn") !== 'true') {
+        next('/login')
+    }
+    next();
+};
+
+export default new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/login',
+            name: 'login',
+            component: Login,
+            beforeEnter: outGuard
+        },
+        {
+            path: '/',
+            name: 'dashboard',
+            component: Dashboard,
+            beforeEnter: inGuard
+        },
+        {
+            path: '/signup',
+            name: 'signUp',
+            component: SignUp,
+            beforeEnter: outGuard
+        }
+    ]
 })

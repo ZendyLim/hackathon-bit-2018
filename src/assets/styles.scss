@@ -2,7 +2,15 @@
 
 @include md-register-theme("default", (
         primary: md-get-palette-color(blue, A200), // The primary color of your application
-        accent: md-get-palette-color(red, A200) // The accent or secondary color
+        accent: md-get-palette-color(red, A200), // The accent or secondary color
+        theme: dark
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
