@@ -42,13 +42,8 @@
         name: 'interest',
         components: {},
         methods: {
-            login: function () {
-                //TODO create login  fucntion
-                localStorage.setItem('loggedIn', 'true');
-                this.$router.push('/');
-            },
-            signup: function () {
-                this.$router.push('/signup');
+            finish: function () {
+                this.$router.push('/app/event');
             }
         },
         data() {

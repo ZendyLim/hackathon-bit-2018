@@ -7,9 +7,9 @@
                 </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Ali Connors</span>
-                    <span>Brunch this weekend?</span>
-                    <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                    <span>IOT</span>
+                    <span>New Event this weekend!</span>
+                    <p>We will have a new event this. Come and join us</p>
                 </div>
 
                 <md-button class="md-icon-button md-list-action">
@@ -25,9 +25,9 @@
                 </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>me, Scott, Jennifer</span>
-                    <span>Summer BBQ</span>
-                    <p>Wish I could come, but I'm out of town this week. :(</p>
+                    <span>Gaming</span>
+                    <span>Dota 2 The International 2018</span>
+                    <p>Join Us and The final of The DOTA 2 International</p>
                 </div>
 
                 <md-button class="md-icon-button md-list-action">
