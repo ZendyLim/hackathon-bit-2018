@@ -8,6 +8,7 @@ import Chat from './views/chat/Chat.vue';
 import ChatHome from './views/chat/Home.vue';
 import Event from './views/event/Event.vue';
 import EventHome from './views/event/Home.vue';
+import EventDetail from './views/event/Detail.vue';
 
 Vue.use(Router);
 
@@ -61,6 +62,11 @@ export default new Router({
                             path: '',
                             name: 'EventHome',
                             component: EventHome
+                        },
+                        {
+                            path: 'detail/:id',
+                            name: 'EventDetail',
+                            component: EventDetail
                         }
                     ]
                 }

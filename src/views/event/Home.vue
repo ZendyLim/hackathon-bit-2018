@@ -3,17 +3,19 @@
         <md-list class="md-double-line">
             <md-subheader>Recommended</md-subheader>
 
-            <md-list-item v-for="rEvent in recommended" :key="rEvent.id">
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+            <router-link :to="`/app/event/detail/${rEvent.id}`" v-for="rEvent in recommended" :key="rEvent.id">
+                <md-list-item>
+                    <div>
+                        <img src="https://via.placeholder.com/100x60"/>
+                    </div>
 
-                <div class="md-list-item-text">
-                    <span>{{rEvent.name}}</span>
-                    <span>Mobile</span>
-                    <span>Mobileasdasdsadsadsadasds</span>
-                </div>
-            </md-list-item>
+                    <div class="md-list-item-text">
+                        <span>{{rEvent.name}}</span>
+                        <span>Mobile</span>
+                        <span>Mobileasdasdsadsadsadasds</span>
+                    </div>
+                </md-list-item>
+            </router-link>
 
             <md-divider></md-divider>
             <md-subheader>Popular</md-subheader>
@@ -58,10 +60,28 @@
         },
         mounted: function () {
             const events = JSON.parse(localStorage.getItem('events'));
-            this.recommended = events.recommended;
-            this.popular = events.popular;
+
+            const data = events.data;
+
+            events.recommended.forEach((x) => {
+                data.forEach((y) => {
+                    if(x === y.id){
+                        this.recommended.push(y);
+                    }
+                })
+            });
+
+            events.popular.forEach((x) => {
+                data.forEach((y) => {
+                    if(x === y.id){
+                        this.popular.push(y);
+                    }
+                })
+            });
+
             this.category = events.category;
-        }
+        },
+        method: {}
     }
 </script>
 
