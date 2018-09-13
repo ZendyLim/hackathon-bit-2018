@@ -1,80 +1,146 @@
 <template>
     <div>
         <md-list class="md-double-line">
-            <md-subheader>Recommended</md-subheader>
-
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/1" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Okutama Hackathonasdsadsadas</span>
-                    <span>Mobile</span>
-                    <span>Mobileasdasdsadsadsadasds</span>
+                    <span>Ali Connors</span>
+                    <span>Brunch this weekend?</span>
+                    <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon class="md-primary">star</md-icon>
+                </md-button>
             </md-list-item>
 
+            <md-divider class="md-inset"></md-divider>
+
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/6" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Okutama Hackathon</span>
-                    <span>Mobile</span>
-                    <span>Mobile</span>
+                    <span>me, Scott, Jennifer</span>
+                    <span>Summer BBQ</span>
+                    <p>Wish I could come, but I'm out of town this week. :(</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
             </md-list-item>
 
-            <md-divider></md-divider>
-            <md-subheader>Popular</md-subheader>
+            <md-divider class="md-inset"></md-divider>
 
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/5" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Okutama Hackathonasdsadsadas</span>
-                    <span>Mobile</span>
-                    <span>Mobileasdasdsadsadsadasds</span>
+                    <span>Sandra Adams</span>
+                    <span>Oui oui</span>
+                    <p>Do you have Paris recommendations? Have you visited good places?</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
             </md-list-item>
 
+            <md-divider class="md-inset"></md-divider>
+
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/8" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Okutama Hackathon</span>
-                    <span>Mobile</span>
-                    <span>Mobile</span>
+                    <span>Trevor Hansen</span>
+                    <span>Order confirmation</span>
+                    <p>Thank you for your recent order from Amazon</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
+            </md-list-item>
+        </md-list>
+
+        <md-list class="md-triple-line md-dense">
+            <md-list-item>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/1" alt="People">
+                </md-avatar>
+
+                <div class="md-list-item-text">
+                    <span>Ali Connors</span>
+                    <span>Brunch this weekend?</span>
+                    <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon class="md-primary">star</md-icon>
+                </md-button>
             </md-list-item>
 
-            <md-divider></md-divider>
-            <md-subheader>Category</md-subheader>
+            <md-divider class="md-inset"></md-divider>
 
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/6" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>Cooking</span>
+                    <span>me, Scott, Jennifer</span>
+                    <span>Summer BBQ</span>
+                    <p>Wish I could come, but I'm out of town this week. :(</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
             </md-list-item>
 
+            <md-divider class="md-inset"></md-divider>
+
             <md-list-item>
-                <div>
-                    <img src="https://via.placeholder.com/100x60"/>
-                </div>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/5" alt="People">
+                </md-avatar>
 
                 <div class="md-list-item-text">
-                    <span>IOT</span>
+                    <span>Sandra Adams</span>
+                    <span>Oui oui</span>
+                    <p>Do you have Paris recommendations? Have you visited good places?</p>
                 </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
+            </md-list-item>
+
+            <md-divider class="md-inset"></md-divider>
+
+            <md-list-item>
+                <md-avatar>
+                    <img src="https://placeimg.com/40/40/people/8" alt="People">
+                </md-avatar>
+
+                <div class="md-list-item-text">
+                    <span>Trevor Hansen</span>
+                    <span>Order confirmation</span>
+                    <p>Thank you for your recent order from Amazon</p>
+                </div>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>star_border</md-icon>
+                </md-button>
             </md-list-item>
         </md-list>
     </div>
