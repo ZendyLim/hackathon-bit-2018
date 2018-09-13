@@ -1,15 +1,19 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/Login.vue';
-import Dashboard from './views/Dashboard.vue';
+import App from './views/App.vue';
 import SignUp from './views/SignUp.vue';
 import Interest from './views/Interest.vue';
+import Chat from './views/chat/Chat.vue';
+import ChatHome from './views/chat/Home.vue';
+import Event from './views/event/Event.vue';
+import EventHome from './views/event/Home.vue';
 
 Vue.use(Router);
 
 const outGuard = (to, from, next) => {
     if (localStorage.getItem("loggedIn")) {
-        next('/dashboard')
+        next('/app/event')
     }
     next();
 };
@@ -32,10 +36,35 @@ export default new Router({
             beforeEnter: outGuard
         },
         {
-            path: '/',
-            name: 'dashboard',
-            component: Dashboard,
-            beforeEnter: inGuard
+            path: '/app',
+            name: 'app',
+            component: App,
+            children: [
+                {
+                    path: 'chat',
+                    name: 'chat',
+                    component: Chat,
+                    children: [
+                        {
+                            path: '',
+                            name: 'chatHome',
+                            component: ChatHome
+                        }
+                    ]
+                },
+                {
+                    path: 'event',
+                    name: 'event',
+                    component: Event,
+                    children: [
+                        {
+                            path: '',
+                            name: 'EventHome',
+                            component: EventHome
+                        }
+                    ]
+                }
+            ]
         },
         {
             path: '/signup',
