@@ -5,6 +5,8 @@ import App from './views/App.vue';
 import SignUp from './views/SignUp.vue';
 import Chat from './views/chat/Chat.vue';
 import ChatHome from './views/chat/Home.vue';
+import Event from './views/event/Event.vue';
+import EventHome from './views/event/Home.vue';
 
 Vue.use(Router);
 
@@ -46,6 +48,18 @@ export default new Router({
                             path: '',
                             name: 'chatHome',
                             component: ChatHome
+                        }
+                    ]
+                },
+                {
+                    path: 'event',
+                    name: 'event',
+                    component: Event,
+                    children: [
+                        {
+                            path: '',
+                            name: 'EventHome',
+                            component: EventHome
                         }
                     ]
                 }
